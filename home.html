@@ -1,0 +1,233 @@
+<html><head><base href="." target="_blank">
+    <style>
+    :root {
+      --primary-blue: #1a4b8c;
+      --accent-blue: #3d7dd8;
+      --white: #ffffff;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    body {
+      background-color: var(--white);
+      color: var(--primary-blue);
+    }
+    
+    nav {
+      background-color: var(--primary-blue);
+      padding: 1rem;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .nav-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      color: var(--white);
+      font-size: 1.5rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+    
+    .nav-links a {
+      color: var(--white);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    .nav-links a:hover {
+      color: var(--accent-blue);
+    }
+    
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
+      padding: 2rem;
+      margin-top: 60px;
+    }
+    
+    .hero-content {
+      text-align: center;
+      color: var(--white);
+    }
+    
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    
+    .cta-button {
+      background-color: var(--white);
+      color: var(--primary-blue);
+      padding: 1rem 2rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: transform 0.3s;
+    }
+    
+    .cta-button:hover {
+      transform: scale(1.05);
+    }
+    
+    .section {
+      padding: 5rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .portfolio-item {
+      background-color: var(--white);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    
+    .portfolio-item:hover {
+      transform: translateY(-10px);
+    }
+    
+    .portfolio-content {
+      padding: 1.5rem;
+    }
+    
+    .technologies {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    
+    .tech-tag {
+      background-color: var(--primary-blue);
+      color: var(--white);
+      padding: 0.3rem 0.8rem;
+      border-radius: 15px;
+      font-size: 0.8rem;
+    }
+    
+    footer {
+      background-color: var(--primary-blue);
+      color: var(--white);
+      padding: 2rem;
+      text-align: center;
+    }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    </head>
+    <body>
+      <nav>
+        <div class="nav-content">
+          <div class="logo">
+            <!-- <svg width="30" height="30" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px;">
+              <circle cx="50" cy="50" r="45" stroke="white" stroke-width="10"/>
+              <path d="M30 50 L70 50 M50 30 L50 70" stroke="white" stroke-width="10"/>
+            </svg> -->
+            LancerForProfit
+          </div>
+          <div class="nav-links">
+            <a href="about.html">About</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+      </nav>
+    
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Creating Digital Excellence</h1>
+          <p>By craft stunning websites and powerful applications that drive business growth</p>
+          <a href="https://calendly.com/lancerforprofit246/30min" class="cta-button">Schedule a Consultation</a>
+        </div>
+      </section>
+    
+      <section class="section" id="about">
+        <h2>About</h2>
+        <p>Lancer For Profit is a premium web development agency specializing in creating exceptional websites and applications. We combine cutting-edge technology with stunning design to deliver solutions that exceed expectations.</p>
+        <p>Expert development and design done with maximum effort to ensure each project is crafted to perfection, focusing on both aesthetics and functionality.</p>
+      </section>
+    
+      <section class="section" id="portfolio">
+        <h2>Our Portfolio</h2>
+        <div class="portfolio">
+          <div class="portfolio-item">
+            <div class="portfolio-content">
+              <h3>E-Commerce Platform</h3>
+              <p>A fully responsive e-commerce solution with integrated payment processing and inventory management.</p>
+              <div class="technologies">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">MongoDB</span>
+              </div>
+            </div>
+          </div>
+    
+          <div class="portfolio-item">
+            <div class="portfolio-content">
+              <h3>Healthcare App</h3>
+              <p>Mobile application for patient management and appointment scheduling.</p>
+              <div class="technologies">
+                <span class="tech-tag">React Native</span>
+                <span class="tech-tag">Firebase</span>
+                <span class="tech-tag">Express</span>
+              </div>
+            </div>
+          </div>
+    
+          <div class="portfolio-item">
+            <div class="portfolio-content">
+              <h3>Corporate Website</h3>
+              <p>Modern, responsive website with content management system and analytics integration.</p>
+              <div class="technologies">
+                <span class="tech-tag">WordPress</span>
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">MySQL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <footer id="contact">
+        <h2>Let's Work Together</h2>
+        <p>Contact us to discuss your next project</p>
+        <p>Email: lancerforprofit246@gmail.com</p>
+        <p>Phone: (246) 269-5025</p>
+      </footer>
+    
+    </body></html>

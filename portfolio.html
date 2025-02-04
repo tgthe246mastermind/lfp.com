@@ -1,0 +1,315 @@
+<html><head><base href="." target="_blank">
+    <style>
+    :root {
+      --primary-blue: #1a4b8c;
+      --accent-blue: #3d7dd8;
+      --white: #ffffff;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    body {
+      background-color: var(--white);
+      color: var(--primary-blue);
+    }
+    
+    nav {
+      background-color: var(--primary-blue);
+      padding: 1rem;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .nav-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      color: var(--white);
+      font-size: 1.5rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+    
+    .nav-links a {
+      color: var(--white);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    .nav-links a:hover {
+      color: var(--accent-blue);
+    }
+    
+    .portfolio-header {
+      margin-top: 80px;
+      text-align: center;
+      padding: 3rem 0;
+      background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
+      color: var(--white);
+    }
+    
+    .portfolio-grid {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+    
+    .portfolio-card {
+      background: var(--white);
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    
+    .portfolio-card:hover {
+      transform: translateY(-10px);
+    }
+    
+    .portfolio-image {
+      width: 100%;
+      height: 250px;
+      background: linear-gradient(45deg, var(--primary-blue), var(--accent-blue));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .portfolio-content {
+      padding: 1.5rem;
+    }
+    
+    .portfolio-content h3 {
+      color: var(--primary-blue);
+      margin-bottom: 1rem;
+    }
+    
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1rem 0;
+    }
+    
+    .tech-tag {
+      background-color: var(--primary-blue);
+      color: var(--white);
+      padding: 0.3rem 0.8rem;
+      border-radius: 15px;
+      font-size: 0.8rem;
+    }
+    
+    .view-project {
+      display: inline-block;
+      background-color: var(--primary-blue);
+      color: var(--white);
+      padding: 0.8rem 1.5rem;
+      border-radius: 25px;
+      text-decoration: none;
+      margin-top: 1rem;
+      transition: background-color 0.3s;
+    }
+    
+    .view-project:hover {
+      background-color: var(--accent-blue);
+    }
+    
+    footer {
+      background-color: var(--primary-blue);
+      color: var(--white);
+      padding: 2rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+    
+    .contact-info {
+      margin-top: 1rem;
+    }
+    
+    @media (max-width: 768px) {
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    </head>
+    <body>
+      <nav>
+        <div class="nav-content">
+          <div class="logo">
+            <!-- <svg width="30" height="30" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px;">
+              <circle cx="50" cy="50" r="45" stroke="white" stroke-width="10"/>
+              <path d="M30 50 L70 50 M50 30 L50 70" stroke="white" stroke-width="10"/>
+            </svg> -->
+            LancerForProfit
+          </div>
+          <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+      </nav>
+    
+      <header class="portfolio-header">
+        <h1>Our Portfolio</h1>
+        <p>Discover our latest projects and success stories</p>
+      </header>
+    
+      <main class="portfolio-grid">
+        <article class="portfolio-card">
+          <div class="portfolio-image">
+            <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+              <rect x="20" y="20" width="60" height="60" stroke="white" stroke-width="4"/>
+              <circle cx="50" cy="50" r="20" stroke="white" stroke-width="4"/>
+            </svg>
+          </div>
+          <div class="portfolio-content">
+            <h3>E-Commerce Platform</h3>
+            <p>A sophisticated online shopping platform with real-time inventory management, secure payment processing, and seamless user experience.</p>
+            <div class="tech-stack">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">MongoDB</span>
+              <span class="tech-tag">Stripe</span>
+            </div>
+            <a href="https://lancerforprofit.com/project/ecommerce" class="view-project">View Project</a>
+          </div>
+        </article>
+    
+        <article class="portfolio-card">
+          <div class="portfolio-image">
+            <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+              <path d="M20,50 Q50,20 80,50 Q50,80 20,50" stroke="white" stroke-width="4" fill="none"/>
+              <circle cx="50" cy="50" r="15" stroke="white" stroke-width="4"/>
+            </svg>
+          </div>
+          <div class="portfolio-content">
+            <h3>Healthcare Management System</h3>
+            <p>An integrated healthcare platform enabling patient management, appointment scheduling, and medical record keeping.</p>
+            <div class="tech-stack">
+              <span class="tech-tag">React Native</span>
+              <span class="tech-tag">Firebase</span>
+              <span class="tech-tag">Express</span>
+              <span class="tech-tag">AWS</span>
+            </div>
+            <a href="https://lancerforprofit.com/project/healthcare" class="view-project">View Project</a>
+          </div>
+        </article>
+    
+        <article class="portfolio-card">
+          <div class="portfolio-image">
+            <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+              <polygon points="50,20 80,40 80,70 50,90 20,70 20,40" stroke="white" stroke-width="4" fill="none"/>
+              <line x1="50" y1="20" x2="50" y2="90" stroke="white" stroke-width="4"/>
+            </svg>
+          </div>
+          <div class="portfolio-content">
+            <h3>Real Estate Platform</h3>
+            <p>A comprehensive real estate solution featuring virtual tours, property management, and automated lead generation.</p>
+            <div class="tech-stack">
+              <span class="tech-tag">Next.js</span>
+              <span class="tech-tag">Three.js</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">Docker</span>
+            </div>
+            <a href="https://lancerforprofit.com/project/realestate" class="view-project">View Project</a>
+          </div>
+        </article>
+    
+        <article class="portfolio-card">
+          <div class="portfolio-image">
+            <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+              <path d="M20,50 C20,20 80,20 80,50 C80,80 20,80 20,50" stroke="white" stroke-width="4" fill="none"/>
+              <circle cx="50" cy="50" r="10" stroke="white" stroke-width="4"/>
+              <path d="M35,65 L65,65" stroke="white" stroke-width="4"/>
+            </svg>
+          </div>
+          <div class="portfolio-content">
+            <h3>Local Artisans Link Up</h3>
+            <p>A marketplace platform connecting local artists and craftsmen with customers, featuring secure payments and detailed product showcases.</p>
+            <div class="tech-stack">
+              <span class="tech-tag">Vue.js</span>
+              <span class="tech-tag">Stripe</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">MongoDB</span>
+            </div>
+            <a href="https://lancerforprofit.com/project/artisans" class="view-project">View Project</a>
+          </div>
+        </article>
+    
+        <article class="portfolio-card">
+          <div class="portfolio-image">
+            <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+              <rect x="25" y="25" width="50" height="50" stroke="white" stroke-width="4" rx="10"/>
+              <circle cx="50" cy="40" r="8" stroke="white" stroke-width="4"/>
+              <path d="M35,60 H65" stroke="white" stroke-width="4"/>
+              <path d="M35,70 H55" stroke="white" stroke-width="4"/>
+            </svg>
+          </div>
+          <div class="portfolio-content">
+            <h3>MechanicForU</h3>
+            <p>A professional portfolio website template for automotive businesses, featuring service listings, team profiles, and customer testimonials.</p>
+            <div class="tech-stack">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Tailwind</span>
+              <span class="tech-tag">Firebase</span>
+              <span class="tech-tag">Google Maps API</span>
+            </div>
+            <a href="https://lancerforprofit.com/project/mechanicforu" class="view-project">View Project</a>
+          </div>
+        </article>
+    
+        <article class="portfolio-card">
+          <div class="portfolio-image">
+            <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+              <circle cx="50" cy="50" r="30" stroke="white" stroke-width="4"/>
+              <path d="M50,30 L50,50 L65,65" stroke="white" stroke-width="4"/>
+              <circle cx="50" cy="50" r="5" stroke="white" stroke-width="4"/>
+            </svg>
+          </div>
+          <div class="portfolio-content">
+            <h3>Online Appointment Booking System</h3>
+            <p>A versatile appointment scheduling platform with calendar integration, automated reminders, and service management features.</p>
+            <div class="tech-stack">
+              <span class="tech-tag">Angular</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">Twilio API</span>
+            </div>
+            <a href="https://lancerforprofit.com/project/appointments" class="view-project">View Project</a>
+          </div>
+        </article>
+      </main>
+    
+      <footer>
+        <h2>Ready to Start Your Project?</h2>
+        <p>Let's create something amazing together</p>
+        <div class="contact-info">
+          <p>Email: lancerforprofit246@gmail.com</p>
+          <p>Phone: (246) 269-5025 </p>
+        </div>
+      </footer>
+    </body></html>

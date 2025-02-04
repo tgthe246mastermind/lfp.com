@@ -1,0 +1,278 @@
+<html><head><base href="." target="_blank">
+    <style>
+    :root {
+      --primary-blue: #1a4b8c;
+      --accent-blue: #3d7dd8;
+      --white: #ffffff;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    body {
+      background-color: var(--white);
+      color: var(--primary-blue);
+    }
+    
+    nav {
+      background-color: var(--primary-blue);
+      padding: 1rem;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .nav-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      color: var(--white);
+      font-size: 1.5rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+    
+    .nav-links a {
+      color: var(--white);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    .nav-links a:hover {
+      color: var(--accent-blue);
+    }
+    
+    .about-header {
+      margin-top: 80px;
+      text-align: center;
+      padding: 3rem 0;
+      background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
+      color: var(--white);
+    }
+    
+    .about-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+    
+    .mission-vision {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+    
+    .mission-card, .vision-card {
+      background: var(--white);
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    
+    .card-icon {
+      margin-bottom: 1.5rem;
+    }
+    
+    .team-section {
+      margin: 4rem 0;
+    }
+    
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .team-member {
+      background: var(--white);
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      padding: 2rem;
+    }
+    
+    .member-avatar {
+      width: 150px;
+      height: 150px;
+      margin: 0 auto 1.5rem;
+    }
+    
+    .tech-tag {
+  background-color: var(--primary-blue);
+  color: var(--white);
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  margin-top: 1rem;  /* Add space between tech-tag and the previous element */
+  margin-bottom: 50px;
+  text-decoration: none;
+}
+
+.role{
+  margin-bottom: 1rem;  /
+}
+    .stats-section {
+      background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
+      color: var(--white);
+      padding: 4rem 0;
+      margin: 4rem 0;
+    }
+    
+    .stats-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      text-align: center;
+    }
+    
+    .stat-item h3 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    footer {
+      background-color: var(--primary-blue);
+      color: var(--white);
+      padding: 2rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+    
+    .contact-info {
+      margin-top: 1rem;
+    }
+    
+    @media (max-width: 768px) {
+      .mission-vision, .team-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    </head>
+    <body>
+      <nav>
+        <div class="nav-content">
+          <div class="logo">
+            <!-- <svg width="30" height="30" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px;">
+              <circle cx="50" cy="50" r="45" stroke="white" stroke-width="10"/>
+              <path d="M30 50 L70 50 M50 30 L50 70" stroke="white" stroke-width="10"/>
+            </svg> -->
+            LancerForProfit
+          </div>
+          <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+      </nav>
+    
+      <header class="about-header">
+        <h1>About LFP</h1>
+        <p>Building Digital Excellence Since 2025</p>
+      </header>
+    
+      <main class="about-content">
+        <section class="intro">
+          <h2>What is LFP?</h2>
+          <p>Lancer For Profit is a premium web and app development company dedicated to transforming businesses through innovative digital solutions. Specializing in creating custom websites and applications that drive growth and enhance user experience.</p>
+        </section>
+    
+        <section class="mission-vision">
+          <div class="mission-card">
+            <div class="card-icon">
+              <svg width="60" height="60" viewBox="0 0 100 100" fill="none">
+                <circle cx="50" cy="50" r="40" stroke="var(--primary-blue)" stroke-width="4"/>
+                <path d="M30,50 L45,65 L70,35" stroke="var(--primary-blue)" stroke-width="4"/>
+              </svg>
+            </div>
+            <h3>Mission</h3>
+            <p>To empower businesses with cutting-edge digital solutions that drive growth and success in the modern marketplace.</p>
+          </div>
+          <div class="vision-card">
+            <div class="card-icon">
+              <svg width="60" height="60" viewBox="0 0 100 100" fill="none">
+                <path d="M20,50 Q50,20 80,50" stroke="var(--primary-blue)" stroke-width="4" fill="none"/>
+                <circle cx="50" cy="50" r="20" stroke="var(--primary-blue)" stroke-width="4"/>
+              </svg>
+            </div>
+            <h3>Vision</h3>
+            <p>To be the leading force in digital transformation, setting new standards in web and app development excellence.</p>
+          </div>
+        </section>
+    
+        <section class="team-section">
+          <h2>Creative Leadership</h2>
+          <div class="team-grid">
+           
+            <div class="team-member">
+              <div class="member-avatar">
+                <svg viewBox="0 0 100 100" fill="none">
+                  <circle cx="50" cy="35" r="25" stroke="var(--primary-blue)" stroke-width="4"/>
+                  <path d="M20,100 Q50,60 80,100" stroke="var(--primary-blue)" stroke-width="4" fill="none"/>
+                </svg>
+              </div>
+              <h3>Theirry Gitens</h3>
+              <p class="role">CEO & Technical Director</p>
+              <a href="bio.html" class="tech-tag">About Me</a>
+           
+            </div>
+
+            
+          </div>
+        </section>
+    
+        <section class="stats-section">
+          <div class="stats-grid">
+            <div class="stat-item">
+              <h3>200+</h3>
+              <p>Projects Completed</p>
+            </div>
+            <div class="stat-item">
+              <h3>150+</h3>
+              <p>Happy Clients</p>
+            </div>
+            <div class="stat-item">
+              <h3>3+</h3>
+              <p>Services Provided</p>
+            </div>
+            <div class="stat-item">
+              <h3>Set Up</h3>
+              <p>Support Available</p>
+            </div>
+          </div>
+        </section>
+      </main>
+    
+      <footer>
+        <h2>Ready to Start Your Project?</h2>
+        <p>Let's create something amazing together</p>
+        <div class="contact-info">
+          <p>Email: lancerforprofit246@gmail.com</p>
+          <p>Phone: (246) 269-5025</p>
+        </div>
+      </footer>
+    </body></html>

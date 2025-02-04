@@ -1,0 +1,219 @@
+<html><head><base href="." target="_blank">
+    <style>
+    :root {
+      --primary-blue: #1a4b8c;
+      --accent-blue: #3d7dd8;
+      --white: #ffffff;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    body {
+      background-color: var(--white);
+      color: var(--primary-blue);
+    }
+    
+    nav {
+      background-color: var(--primary-blue);
+      padding: 1rem;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .nav-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      color: var(--white);
+      font-size: 1.5rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+    
+    .nav-links a {
+      color: var(--white);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    .nav-links a:hover {
+      color: var(--accent-blue);
+    }
+    
+    .about-header {
+      margin-top: 80px;
+      text-align: center;
+      padding: 3rem 0;
+      background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
+      color: var(--white);
+    }
+    
+    .about-content {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+    }
+    
+    .contact-details {
+      background: var(--white);
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+    
+    .contact-details a {
+      color: var(--accent-blue);
+      text-decoration: none;
+    }
+    
+    .contact-details a:hover {
+      text-decoration: underline;
+    }
+    
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    
+    .service-card {
+      background: var(--white);
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .section-title {
+      color: var(--primary-blue);
+      margin: 2rem 0 1rem 0;
+      font-size: 1.8rem;
+    }
+    
+    .about-content p {
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+    
+    footer {
+      background-color: var(--primary-blue);
+      color: var(--white);
+      padding: 2rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+    
+    .contact-info {
+      margin-top: 1rem;
+    }
+    
+    @media (max-width: 768px) {
+      .about-content {
+        padding: 1rem;
+      }
+      
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    </head>
+    <body>
+      <nav>
+        <div class="nav-content">
+          <div class="logo">
+            <!-- <svg width="30" height="30" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px;">
+              <circle cx="50" cy="50" r="45" stroke="white" stroke-width="10"/>
+              <path d="M30 50 L70 50 M50 30 L50 70" stroke="white" stroke-width="10"/>
+            </svg> -->
+            LancerForProfit
+          </div>
+          <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+      </nav>
+    
+      <header class="about-header">
+        <h1>About Theirry R.Z. Gittens</h1>
+        <p>Transforming Ideas into Digital Reality</p>
+      </header>
+    
+      <main class="about-content">
+        <div class="contact-details">
+          <p><strong>Location:</strong> Friendship Terrace, St. Michael, Barbados</p>
+          <p><strong>Phone:</strong> (246) 624-8181 (Home) | (246) 269-5025 (Cell)</p>
+          <p><strong>Email:</strong> <a href="mailto:theirrygittensmouri@gmail.com">theirrygittensmouri@gmail.com</a></p>
+        </div>
+    
+        <section>
+          <h2 class="section-title">Who I Am</h2>
+          <p>I am a dedicated professional in <strong>Software, Website, and Application Development</strong> with a passion for creating tailored solutions that meet unique challenges. With a strong foundation in <strong>problem-solving</strong> and <strong>program customization</strong>, I thrive on transforming ideas into functional, user-friendly systems that empower individuals and businesses.</p>
+        </section>
+    
+        <section>
+          <h2 class="section-title">What I Offer</h2>
+          <div class="services-grid">
+            <div class="service-card">
+              <h3>Custom Software Development</h3>
+              <p>Bringing your vision to life with personalized software solutions.</p>
+            </div>
+            <div class="service-card">
+              <h3>Website Design & Development</h3>
+              <p>Crafting responsive, visually appealing, and high-performance websites.</p>
+            </div>
+            <div class="service-card">
+              <h3>Application Development</h3>
+              <p>Building scalable mobile and desktop applications to meet your specific needs.</p>
+            </div>
+            <div class="service-card">
+              <h3>Problem-Solving Expertise</h3>
+              <p>Tackling complex challenges with innovative, efficient approaches.</p>
+            </div>
+          </div>
+        </section>
+    
+        <section>
+          <h2 class="section-title">Why Choose Me</h2>
+          <p>With a relentless focus on <strong>quality</strong> and a commitment to <strong>excellence</strong>, I work closely with clients to ensure their goals are not just met but exceeded. My solutions are designed to align with your objectives while staying adaptable for future growth.</p>
+          <p>Let's collaborate to create solutions that make a difference.</p>
+        </section>
+      </main>
+    
+      <footer>
+        <h2>Ready to Start Your Project?</h2>
+        <p>Let's create something amazing together</p>
+        <div class="contact-info">
+          <p>Email: lancerforprofit246@gmail.com</p>
+          <p>Phone: (246) 269-5025</p>
+        </div>
+      </footer>
+    </body></html>

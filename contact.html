@@ -1,0 +1,310 @@
+<html><head><base href="." target="_blank">
+    <style>
+    :root {
+      --primary-blue: #1a4b8c;
+      --accent-blue: #3d7dd8;
+      --white: #ffffff;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    body {
+      background-color: var(--white);
+      color: var(--primary-blue);
+    }
+    
+    nav {
+      background-color: var(--primary-blue);
+      padding: 1rem;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .nav-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      color: var(--white);
+      font-size: 1.5rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+    
+    .nav-links a {
+      color: var(--white);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    .nav-links a:hover {
+      color: var(--accent-blue);
+    }
+    
+    .contact-header {
+      margin-top: 80px;
+      text-align: center;
+      padding: 3rem 0;
+      background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
+      color: var(--white);
+    }
+    
+    .contact-container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+    }
+    
+    .contact-form {
+      background: var(--white);
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: var(--primary-blue);
+      font-weight: 600;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+    
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--accent-blue);
+    }
+    
+    .submit-btn {
+      background-color: var(--primary-blue);
+      color: var(--white);
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    
+    .submit-btn:hover {
+      background-color: var(--accent-blue);
+    }
+    
+    .contact-info {
+      margin-top: 3rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    
+    .info-card {
+      background: var(--white);
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    
+    .info-card svg {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 1rem;
+    }
+    
+    footer {
+      background-color: var(--primary-blue);
+      color: var(--white);
+      padding: 2rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+    
+    @media (max-width: 768px) {
+      .contact-container {
+        padding: 1rem;
+      }
+      
+      .contact-info {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    .success-message {
+      display: none;
+      background-color: #4CAF50;
+      color: white;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      text-align: center;
+    }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    </head>
+    <body>
+      <nav>
+        <div class="nav-content">
+          <div class="logo">
+            <!-- <svg width="30" height="30" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px;">
+              <circle cx="50" cy="50" r="45" stroke="white" stroke-width="10"/>
+              <path d="M30 50 L70 50 M50 30 L50 70" stroke="white" stroke-width="10"/>
+            </svg> -->
+            LancerForProfit
+          </div>
+          <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="portfolio.html">Portfolio</a>
+          </div>
+        </div>
+      </nav>
+    
+      <header class="contact-header">
+        <h1>Contact Us</h1>
+        <p>Let's Bring Your Ideas to Life</p>
+      </header>
+    
+      <main class="contact-container">
+        <form id="contactForm" class="contact-form" action="/send-email" method="POST">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Your Phone Number">
+          </div>
+          <div class="form-group">
+            <label for="project">Project Type</label>
+            <select id="project" name="project" required>
+              <option value="">Select a project type</option>
+              <option value="website">Website Development</option>
+              <option value="application">Application Development</option>
+              <option value="custom">Custom Software</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Project Details</label>
+            <textarea id="message" name="message" rows="6" placeholder="Describe your project in detail" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      
+        <!-- Success Message -->
+        <div id="successMessage" class="success-message" aria-hidden="true" style="display: none;">
+          Thank you for your message! We'll get back to you soon.
+        </div>
+      
+        <!-- Contact Information -->
+        <div class="contact-info">
+          <div class="info-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+            <h3>Phone</h3>
+            <p>(246) 624-8181</p>
+            <p>(246) 269-5025</p>
+          </div>
+          <div class="info-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            <h3>Email</h3>
+            <p>lancerforprofit246@gmail.com</p>
+          </div>
+          <div class="info-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            <h3>Location</h3>
+            <p>Friendship Terrace,</p>
+            <p>St. Michael, Barbados</p>
+          </div>
+        </div>
+      </main>
+      
+    
+      <footer>
+        <h2>Ready to Start Your Project?</h2>
+        <p>Let's create something amazing together</p>
+      </footer>
+    
+      <script>
+        document.getElementById('emailForm').addEventListener('submit', function (e) {
+          e.preventDefault(); // Prevent default form submission
+      
+          const form = this;
+      
+          // Prepare the form data
+          const formData = {
+            from: document.getElementById('from').value,
+            subject: document.getElementById('subject').value,
+            message: document.getElementById('message').value,
+          };
+      
+          // Use Fetch API to send data to the backend
+          fetch(form.action, {
+            method: form.method,
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+          })
+            .then((response) => {
+              if (response.ok) {
+                // Show success message
+                document.getElementById('successMessage').style.display = 'block';
+                form.reset(); // Clear the form
+      
+                // Hide the success message after 5 seconds
+                setTimeout(function () {
+                  document.getElementById('successMessage').style.display = 'none';
+                }, 5000);
+              } else {
+                console.error('Failed to send email:', response.statusText);
+                alert('Failed to send email. Please try again.');
+              }
+            })
+            .catch((error) => {
+              console.error('Error:', error);
+              alert('An error occurred while sending the email. Please try again.');
+            });
+        });
+      </script>
+    </body></html>
